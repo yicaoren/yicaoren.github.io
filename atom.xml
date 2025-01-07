@@ -4,13 +4,95 @@
   <title><![CDATA[YICR 的客厅]]></title>
   <link href="https://yicaoren.github.io/atom.xml" rel="self"/>
   <link href="https://yicaoren.github.io/"/>
-  <updated>2025-01-07T21:46:15+08:00</updated>
+  <updated>2025-01-07T21:46:20+08:00</updated>
   <id>https://yicaoren.github.io/</id>
   <author>
     <name><![CDATA[]]></name>
     
   </author>
   <generator uri="http://www.mweb.im/">MWeb</generator>
+  
+  <entry>
+    <title type="html"><![CDATA[写一下 MWeb 推送静态网站部署到 Github 的个人体验]]></title>
+    <link href="https://yicaoren.github.io/17362578734901.html"/>
+    <updated>2025-01-07T21:51:13+08:00</updated>
+    <id>https://yicaoren.github.io/17362578734901.html</id>
+    <content type="html"><![CDATA[
+<p>虽然 MWeb 官方有教程，但对于新手来说还是会遇到很多问题，比如如何在 GitHub 上部署个人页面，发布脚本命令也会遇到各种问题，只能一步一步的找 Monica ai 问，一步一步的解决。<br />
+最终流程倒是挺简单，但是过程会踩很多坑，还看不懂踩的什么坑。下面我大概写一下我的部署流程，尽量简单无脑。</p>
+<h2><a id="%E7%AC%AC%E4%B8%80%E6%AD%A5%E9%85%8D%E7%BD%AEgithub-pages" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>第一步 配置 GitHub Pages</h2>
+<p>参考：<a href="https://pages.github.com/">https://pages.github.com/</a></p>
+<h3><a id="1%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA%E6%96%B0%E4%BB%93%E5%BA%93%EF%BC%88-repository%EF%BC%89" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>1.创建一个新仓库（repository）</h3>
+<ul>
+<li>注册或登陆自己的 GitHub</li>
+<li>点击页面右上角自己的用户头像</li>
+<li>点击 Your repositories</li>
+<li>点击新页面右上角 New</li>
+<li>参考以下页面创建一个新的仓库。<br />
+<img src="media/17362578734901/17362585574171.jpg" alt="" /><br />
+重点注意：仓库名使用「自己的用户名.github.io」，比如以上案例，所有者的名称是 sophshep，后面要再写多一遍sophshep 再加上「.github.io」。这个地方是我踩的深坑，我以为可以自定义名称，没想到不能乱写要和所有者的名称一样才行。</li>
+</ul>
+<h3><a id="2%E9%85%8D%E7%BD%AE%E4%B8%AA%E4%BA%BA%E5%AF%86%E5%8C%99" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>2.配置个人密匙</h3>
+<ul>
+<li>点击页面右上角自己的用户头像</li>
+<li>点击 Settings</li>
+<li>点击左侧栏 Developer settings</li>
+<li>点击左侧栏 personal access tokens &gt; Tokens（classic）</li>
+<li>点击右上角 Generate new token &gt; Generate new token(classic)</li>
+<li>新页面这里 Expiration 这里选 90 天或更少，其他什么都不选拉到最下面创建</li>
+<li>创建之后显示的密匙最好自己复制粘贴到其他地方备用，以后是看不到这个密匙的</li>
+</ul>
+<h3><a id="3%E6%8C%89%E7%85%A7-https-pages-github-com%E9%A1%B5%E9%9D%A2%E8%B5%B0%E4%B8%80%E9%81%8D" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>3.按照<a href="https://pages.github.com/%E9%A1%B5%E9%9D%A2%E8%B5%B0%E4%B8%80%E9%81%8D">https://pages.github.com/页面走一遍</a></h3>
+<p>我也不知道有没有必要走这一遍，但是我是按照这个页面操作了一遍，建议各位跟我一样。<br />
+注意：我是选的 A terminal，命令流程我就截图展示，大家也可以直接看网页。<br />
+<img src="media/17362578734901/17362594773286.jpg" alt="" /><br />
+<img src="media/17362578734901/17362594939488.jpg" alt="" /><br />
+<img src="media/17362578734901/17362595090696.jpg" alt="" /><br />
+以上命令执行完之后，如果不出意外，就可以试着访问一下自己的主页「<a href="https://username.github.io.%E3%80%8D%E7%9C%8B%E7%9C%8B">https://username.github.io.」看看</a> Hello World。</p>
+<p>以上，GitHub Pages 就配置好了，接下来是 MWeb。</p>
+<h2><a id="%E7%AC%AC%E4%BA%8C%E6%AD%A5%E9%85%8D%E7%BD%AEmweb%E4%BB%A5%E5%8F%8A%E5%8F%91%E5%B8%83%E8%84%9A%E6%9C%AC" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>第二步 配置 MWeb 以及 发布脚本</h2>
+<p>参考：<a href="https://zh.mweb.im/zh-mweb-static-blog">https://zh.mweb.im/zh-mweb-static-blog</a><br />
+参考：<a href="https://zh.mweb.im/how_to_use_shell_script">https://zh.mweb.im/how_to_use_shell_script</a></p>
+<h3><a id="1%E4%BD%93%E9%AA%8C%E9%9D%99%E6%80%81%E7%BD%91%E7%AB%99%E6%9C%80%E7%AE%80%E5%8D%95%E7%9A%84%E6%96%B9%E5%BC%8F" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>1.体验静态网站最简单的方式</h3>
+<p>打开 MWeb，在文档库里新建一个分类（文件夹），放几篇自己写的文章进去。</p>
+<ul>
+<li>右键这个分类，点击编辑</li>
+<li>点击弹出页面右下角「设为静态网站」，之后会弹出以下界面<br />
+<img src="media/17362578734901/17362599919613.jpg" alt="" /><br />
+模板那里是网站主题，可以去官网下载一些主题，或者自己研究一下怎么自己写主题。其他位置都可以按自己需要填写，不过网站网址这里需要注意填写上面配置的 GitHub Pages 的网址，比如我的是：<a href="https://yicaoren.github.io/">https://yicaoren.github.io/</a></li>
+<li>只是体验静态网站，那点击上面生成网站 &gt; 预览网站，就能看到自己的网页了。</li>
+<li>其他设置看官网说明，就不细说了。</li>
+</ul>
+<h3><a id="2%E9%85%8D%E7%BD%AE%E3%80%8C%E5%8F%91%E5%B8%83%E8%84%9A%E6%9C%AC%E3%80%8D" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>2.配置「发布脚本」</h3>
+<p>这里我直接截图官网说明，并说明我操作失误的地方。因为前面已经配制好的 GitHub Pages，所以直接从第 2 步开始。</p>
+<h3><a id="2-clone%E4%BD%A0%E7%9A%84-pages%E5%88%B0-mweb%E9%9D%99%E6%80%81%E7%BD%91%E7%AB%99%E7%94%9F%E6%88%90%E7%9B%AE%E5%BD%95%E4%B8%AD" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>2.Clone 你的 pages 到 MWeb 静态网站生成目录中</h3>
+<p><img src="media/17362578734901/17362604586078.jpg" alt="" /><br />
+注意：</p>
+<ol>
+<li>第 4 点这里，说要删除原本生成的那个静态网址文件夹，是真的要删除，大家不用担心会影响原本 MWeb 中的内容，可以放心删除。</li>
+<li>'你的 git pages 的 repo'这个填这个网址「<a href="https://github.com/yicaoren/yicaoren.github.io%E3%80%8D%EF%BC%8C%E6%8A%8A">https://github.com/yicaoren/yicaoren.github.io」，把</a> yicaoren 换成你们自己的用户名。</li>
+<li>注意'你的 git pages 的 repo' 'MWeb中文官网'中间是有空格的，并且实际写命令的时候不用有单引号。</li>
+</ol>
+<h3><a id="3%E9%85%8D%E7%BD%AE%E5%8F%91%E5%B8%83%E8%84%9A%E6%9C%AC" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>3.配置发布脚本</h3>
+<p>在下图，在 “MWeb 偏好设置” - “扩展” - “发布脚本” 中配置。<br />
+<img src="media/17362578734901/17362608373461.jpg" alt="" /></p>
+<p>建议复制以下我的内容，因为我用着没问题：</p>
+<pre><code class="language-plain_text">#!/bin/sh
+# Please set the name and email. 
+# Because MWeb can't get your github global setting.
+
+git config user.name &quot;yicaoren&quot;
+git config user.email &quot;yicaoren@gmail.com&quot;
+
+git add --ignore-removal .
+git commit -m &quot;{{year}}-{{month}}-{{day}} {{time}}&quot;
+git push -u origin main
+</code></pre>
+<p>以上配制好之后，就可以关掉 MWeb 的偏好设置，返回 MWeb 应用界面，找到之前设置过静态网址的分类，右键点击最下面的「复制发布脚本命令并打开终端」，会自动打开终端，直接粘贴回车即可。<br />
+刚操作完之后不要着急打开自己的网页看效果，因为没那么快。过几分钟再打开，就能看到自己配置好的主页了。有新增内容在 MWeb 的静态网址分类中之后，重新发布脚本命令即可。</p>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[GoodTask 简明使用]]></title>

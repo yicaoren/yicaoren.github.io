@@ -1,0 +1,623 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+    
+  写一下 MWeb 推送静态网站部署到 Github 的个人体验 - YICR 的客厅
+  
+  </title>
+  
+  
+  <link href="atom.xml" rel="alternate" title="YICR 的客厅" type="application/atom+xml">
+    <link rel="stylesheet" href="asset/css/foundation.min.css" />
+    <link rel="stylesheet" href="asset/css/docs.css" />
+    <script src="asset/js/vendor/modernizr.js"></script>
+    <script src="asset/js/vendor/jquery.js"></script>
+ 
+<script type="text/javascript">
+  function before_search(){
+    var searchVal = 'site:yicaoren.github.io ' + document.getElementById('search_input').value;
+    document.getElementById('search_q').value = searchVal;
+    return true;
+  }
+</script>
+  </head>
+  <body class="antialiased hide-extras">
+    
+    <div class="marketing off-canvas-wrap" data-offcanvas>
+      <div class="inner-wrap">
+
+
+<nav class="top-bar docs-bar hide-for-small" data-topbar>
+
+
+  <section class="top-bar-section">
+  <div class="row">
+      <div style="position: relative;width:100%;"><div style="position: absolute; width:100%;">
+        <ul id="main-menu" class="left">
+        
+        <li id=""><a target="_self" href="index.html">Home</a></li>
+        
+        <li id=""><a target="_self" href="archives.html">Archives</a></li>
+        
+        </ul>
+
+        <ul class="right" id="search-wrap">
+          <li>
+<form target="_blank" onsubmit="return before_search();" action="https://google.com/search" method="get">
+    <input type="hidden" id="search_q" name="q" value="" />
+    <input tabindex="1" type="search" id="search_input"  placeholder="Search"/>
+</form>
+</li>
+          </ul>
+      </div></div>
+  </div>
+  </section>
+
+</nav>
+
+        <nav class="tab-bar show-for-small">
+  <a href="javascript:void(0)" class="left-off-canvas-toggle menu-icon">
+    <span> &nbsp; YICR 的客厅</span>
+  </a>
+</nav>
+
+<aside class="left-off-canvas-menu">
+      <ul class="off-canvas-list">
+        
+        <li><a target="_self" href="index.html">Home</a></li>
+        
+        <li><a target="_self" href="archives.html">Archives</a></li>
+        
+
+    <li><label>Categories</label></li>
+
+         
+
+      </ul>
+    </aside>
+
+<a class="exit-off-canvas" href="#"></a>
+
+
+        <section id="main-content" role="main" class="scroll-container">
+        
+       
+
+ <script type="text/javascript">
+  $(function(){
+    $('#menu_item_index').addClass('is_active');
+  });
+</script>
+<div class="row">
+  <div class="large-8 medium-8 columns">
+      <div class="markdown-body article-wrap">
+       <div class="article">
+          
+          <h1>写一下 MWeb 推送静态网站部署到 Github 的个人体验</h1>
+     
+        <div class="read-more clearfix">
+          <span class="date">2025/01/07</span>
+
+          
+           
+         
+          <span class="comments">
+            
+
+            
+          </span>
+
+        </div>
+      </div><!-- article -->
+
+      <div class="article-content">
+      <p>虽然 MWeb 官方有教程，但对于新手来说还是会遇到很多问题，比如如何在 GitHub 上部署个人页面，发布脚本命令也会遇到各种问题，只能一步一步的找 Monica ai 问，一步一步的解决。<br />
+最终流程倒是挺简单，但是过程会踩很多坑，还看不懂踩的什么坑。下面我大概写一下我的部署流程，尽量简单无脑。</p>
+<h2><a id="%E7%AC%AC%E4%B8%80%E6%AD%A5%E9%85%8D%E7%BD%AEgithub-pages" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>第一步 配置 GitHub Pages</h2>
+<p>参考：<a href="https://pages.github.com/">https://pages.github.com/</a></p>
+<h3><a id="1%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA%E6%96%B0%E4%BB%93%E5%BA%93%EF%BC%88-repository%EF%BC%89" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>1.创建一个新仓库（repository）</h3>
+<ul>
+<li>注册或登陆自己的 GitHub</li>
+<li>点击页面右上角自己的用户头像</li>
+<li>点击 Your repositories</li>
+<li>点击新页面右上角 New</li>
+<li>参考以下页面创建一个新的仓库。<br />
+<img src="media/17362578734901/17362585574171.jpg" alt="" /><br />
+重点注意：仓库名使用「自己的用户名.github.io」，比如以上案例，所有者的名称是 sophshep，后面要再写多一遍sophshep 再加上「.github.io」。这个地方是我踩的深坑，我以为可以自定义名称，没想到不能乱写要和所有者的名称一样才行。</li>
+</ul>
+<h3><a id="2%E9%85%8D%E7%BD%AE%E4%B8%AA%E4%BA%BA%E5%AF%86%E5%8C%99" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>2.配置个人密匙</h3>
+<ul>
+<li>点击页面右上角自己的用户头像</li>
+<li>点击 Settings</li>
+<li>点击左侧栏 Developer settings</li>
+<li>点击左侧栏 personal access tokens &gt; Tokens（classic）</li>
+<li>点击右上角 Generate new token &gt; Generate new token(classic)</li>
+<li>新页面这里 Expiration 这里选 90 天或更少，其他什么都不选拉到最下面创建</li>
+<li>创建之后显示的密匙最好自己复制粘贴到其他地方备用，以后是看不到这个密匙的</li>
+</ul>
+<h3><a id="3%E6%8C%89%E7%85%A7-https-pages-github-com%E9%A1%B5%E9%9D%A2%E8%B5%B0%E4%B8%80%E9%81%8D" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>3.按照<a href="https://pages.github.com/%E9%A1%B5%E9%9D%A2%E8%B5%B0%E4%B8%80%E9%81%8D">https://pages.github.com/页面走一遍</a></h3>
+<p>我也不知道有没有必要走这一遍，但是我是按照这个页面操作了一遍，建议各位跟我一样。<br />
+注意：我是选的 A terminal，命令流程我就截图展示，大家也可以直接看网页。<br />
+<img src="media/17362578734901/17362594773286.jpg" alt="" /><br />
+<img src="media/17362578734901/17362594939488.jpg" alt="" /><br />
+<img src="media/17362578734901/17362595090696.jpg" alt="" /><br />
+以上命令执行完之后，如果不出意外，就可以试着访问一下自己的主页「<a href="https://username.github.io.%E3%80%8D%E7%9C%8B%E7%9C%8B">https://username.github.io.」看看</a> Hello World。</p>
+<p>以上，GitHub Pages 就配置好了，接下来是 MWeb。</p>
+<h2><a id="%E7%AC%AC%E4%BA%8C%E6%AD%A5%E9%85%8D%E7%BD%AEmweb%E4%BB%A5%E5%8F%8A%E5%8F%91%E5%B8%83%E8%84%9A%E6%9C%AC" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>第二步 配置 MWeb 以及 发布脚本</h2>
+<p>参考：<a href="https://zh.mweb.im/zh-mweb-static-blog">https://zh.mweb.im/zh-mweb-static-blog</a><br />
+参考：<a href="https://zh.mweb.im/how_to_use_shell_script">https://zh.mweb.im/how_to_use_shell_script</a></p>
+<h3><a id="1%E4%BD%93%E9%AA%8C%E9%9D%99%E6%80%81%E7%BD%91%E7%AB%99%E6%9C%80%E7%AE%80%E5%8D%95%E7%9A%84%E6%96%B9%E5%BC%8F" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>1.体验静态网站最简单的方式</h3>
+<p>打开 MWeb，在文档库里新建一个分类（文件夹），放几篇自己写的文章进去。</p>
+<ul>
+<li>右键这个分类，点击编辑</li>
+<li>点击弹出页面右下角「设为静态网站」，之后会弹出以下界面<br />
+<img src="media/17362578734901/17362599919613.jpg" alt="" /><br />
+模板那里是网站主题，可以去官网下载一些主题，或者自己研究一下怎么自己写主题。其他位置都可以按自己需要填写，不过网站网址这里需要注意填写上面配置的 GitHub Pages 的网址，比如我的是：<a href="https://yicaoren.github.io/">https://yicaoren.github.io/</a></li>
+<li>只是体验静态网站，那点击上面生成网站 &gt; 预览网站，就能看到自己的网页了。</li>
+<li>其他设置看官网说明，就不细说了。</li>
+</ul>
+<h3><a id="2%E9%85%8D%E7%BD%AE%E3%80%8C%E5%8F%91%E5%B8%83%E8%84%9A%E6%9C%AC%E3%80%8D" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>2.配置「发布脚本」</h3>
+<p>这里我直接截图官网说明，并说明我操作失误的地方。因为前面已经配制好的 GitHub Pages，所以直接从第 2 步开始。</p>
+<h3><a id="2-clone%E4%BD%A0%E7%9A%84-pages%E5%88%B0-mweb%E9%9D%99%E6%80%81%E7%BD%91%E7%AB%99%E7%94%9F%E6%88%90%E7%9B%AE%E5%BD%95%E4%B8%AD" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>2.Clone 你的 pages 到 MWeb 静态网站生成目录中</h3>
+<p><img src="media/17362578734901/17362604586078.jpg" alt="" /><br />
+注意：</p>
+<ol>
+<li>第 4 点这里，说要删除原本生成的那个静态网址文件夹，是真的要删除，大家不用担心会影响原本 MWeb 中的内容，可以放心删除。</li>
+<li>'你的 git pages 的 repo'这个填这个网址「<a href="https://github.com/yicaoren/yicaoren.github.io%E3%80%8D%EF%BC%8C%E6%8A%8A">https://github.com/yicaoren/yicaoren.github.io」，把</a> yicaoren 换成你们自己的用户名。</li>
+<li>注意'你的 git pages 的 repo' 'MWeb中文官网'中间是有空格的，并且实际写命令的时候不用有单引号。</li>
+</ol>
+<h3><a id="3%E9%85%8D%E7%BD%AE%E5%8F%91%E5%B8%83%E8%84%9A%E6%9C%AC" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>3.配置发布脚本</h3>
+<p>在下图，在 “MWeb 偏好设置” - “扩展” - “发布脚本” 中配置。<br />
+<img src="media/17362578734901/17362608373461.jpg" alt="" /></p>
+<p>建议复制以下我的内容，因为我用着没问题：</p>
+<pre><code class="language-plain_text">#!/bin/sh
+# Please set the name and email. 
+# Because MWeb can't get your github global setting.
+
+git config user.name &quot;yicaoren&quot;
+git config user.email &quot;yicaoren@gmail.com&quot;
+
+git add --ignore-removal .
+git commit -m &quot;{{year}}-{{month}}-{{day}} {{time}}&quot;
+git push -u origin main
+</code></pre>
+<p>以上配制好之后，就可以关掉 MWeb 的偏好设置，返回 MWeb 应用界面，找到之前设置过静态网址的分类，右键点击最下面的「复制发布脚本命令并打开终端」，会自动打开终端，直接粘贴回车即可。<br />
+刚操作完之后不要着急打开自己的网页看效果，因为没那么快。过几分钟再打开，就能看到自己配置好的主页了。有新增内容在 MWeb 的静态网址分类中之后，重新发布脚本命令即可。</p>
+
+
+    
+
+      </div>
+
+      <div class="row">
+        <div class="large-6 columns">
+        <p class="text-left" style="padding:15px 0px;">
+      
+        </p>
+        </div>
+        <div class="large-6 columns">
+      <p class="text-right" style="padding:15px 0px;">
+      
+          <a  href="17361354064867.html" 
+          title="Next Post: GoodTask 简明使用">GoodTask 简明使用 &raquo;</a>
+      
+      </p>
+        </div>
+      </div>
+      <div class="comments-wrap">
+        <div class="share-comments">
+          
+
+          
+
+          
+        </div>
+      </div>
+    </div><!-- article-wrap -->
+  </div><!-- large 8 -->
+
+
+
+
+ <div class="large-4 medium-4 columns">
+  <div class="hide-for-small">
+    <div id="sidebar" class="sidebar">
+          <div id="site-info" class="site-info">
+            
+                <h1>YICR 的客厅</h1>
+                <div class="site-des">我自己的一些产品使用体验</div>
+                <div class="social">
+
+
+
+
+
+
+
+
+
+
+
+  <a target="_blank" class="rss" href="atom.xml" title="RSS">RSS</a>
+                
+              	 </div>
+          	</div>
+
+             
+
+              <div id="site-categories" class="side-item ">
+                <div class="side-header">
+                  <h2>Categories</h2>
+                </div>
+                <div class="side-content">
+
+      	<p class="cat-list">
+         
+        </p>
+
+
+                </div>
+              </div>
+
+              <div id="site-categories" class="side-item">
+                <div class="side-header">
+                  <h2>Recent Posts</h2>
+                </div>
+                <div class="side-content">
+                <ul class="posts-list">
+	      
+		      
+			      <li class="post">
+			        <a href="17362578734901.html">写一下 MWeb 推送静态网站部署到 Github 的个人体验</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
+			        <a href="17361354064867.html">GoodTask 简明使用</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
+			        <a href="17361459484940.html">德龙ECAM22.110.SB调试</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
+			        <a href="17361459485548.html">wf-1000xm4 的 EQ 方案推荐</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
+			        <a href="17361458461430.html">家庭影院搭建</a>
+			      </li>
+		     
+		  
+		      
+		   
+		  		</ul>
+                </div>
+              </div>
+        </div><!-- sidebar -->
+      </div><!-- hide for small -->
+</div><!-- large 4 -->
+
+</div><!-- row -->
+
+ <div class="page-bottom clearfix">
+  <div class="row">
+   <p class="copyright">Copyright &copy; 2015
+Powered by <a target="_blank" href="http://www.mweb.im">MWeb</a>,&nbsp; 
+Theme used <a target="_blank" href="http://github.com">GitHub CSS</a>.</p>
+  </div>
+</div>
+
+        </section>
+      </div>
+    </div>
+
+<script>(n=>{"use strict";let s,r,e;const l=["cdn.jsdelivr.net","fastly.jsdelivr.net","gcore.jsdelivr.net","cdn.zenless.top","testingcf.jsdelivr.net"],t="//",i=l[0],o=Date.now(),a=2e3,c="jsdelivr-auto-fallback",f="/gh/PipecraftNet/jsdelivr-auto-fallback@main/empty.css?",d=e=>e&&e.includes(t+i),m=e=>e.replace(t+i,t+s),u=window.setTimeout,v=n.querySelectorAll.bind(n),b=()=>{let e,t;for(e of v('link[rel="stylesheet"]'))t=e.href,d(t)&&!t.includes(f)&&(e.href=m(t));for(e of v("script"))if(t=e.src,d(t)){const s=n.createElement("script");s.src=m(t),e.defer=!0,e.src="",e.before(s),e.remove()}for(e of v("img"))t=e.src,d(t)&&(e.src="",e.src=m(t));for(e of v("*[style]"))t=e.getAttribute("style"),d(t)&&e.setAttribute("style",m(t));for(e of v("style"))t=e.innerHTML,d(t)&&(e.innerHTML=m(t))},h=()=>{!e&&r&&s&&(console.warn(i+" is not available. Use "+s),e=!0,u(b,0),u(b,20),setInterval(b,500))},g=(()=>{try{return Object.assign({},JSON.parse(localStorage.getItem(c)||"{}"))}catch{return{}}})(),y=()=>{g.time=o,g.failed=!1,g.fastNode=null;for(const t of l)((e,t)=>{let s;const r=n.createElement("link"),l=e=>{s&&(clearTimeout(s),s=0,e||(r.href="data:text/css;base64,"),r.remove(),t(e))};s=u(l,a),r.addEventListener("error",()=>l(!1)),r.addEventListener("load",()=>l(!0)),r.rel="stylesheet",r.text="text/css",r.href=e+f+o,n.head.insertAdjacentElement("afterbegin",r)})("https://"+t,e=>{e||t!==i||(r=!0,g.failed=!0),e&&!s&&(s=t),e&&!g.fastNode&&(g.fastNode=t),h()});u(()=>{r&&!s&&(s=l[1],h()),localStorage.setItem(c,JSON.stringify(g))},a+100)};if(g.time&&o-g.time<36e5&&g.failed&&g.fastNode)r=!0,s=g.fastNode,h(),u(y,1e3);else if(n.head)y();else{const j=new MutationObserver(()=>{n.head&&(j.disconnect(),y())});j.observe(n,{childList:!0,subtree:!0})}})(document);</script>
+<style>.mweb-charts{background:#fff;}
+body{ box-sizing: border-box;
+    margin: 0 auto;}
+@media print{
+    pre, code, pre code {
+     overflow: visible !important;
+     white-space: pre-wrap !important;       /* css-3 */
+     white-space: -moz-pre-wrap !important;  /* Mozilla, since 1999 */
+     white-space: -pre-wrap !important;      /* Opera 4-6 */
+     white-space: -o-pre-wrap !important;    /* Opera 7 */
+     word-wrap: break-word !important;       /* Internet Explorer 5.5+ */
+    }
+    html,body{margin:0;padding:4px;}
+}
+
+
+
+div.code-toolbar {
+  position: relative;
+}
+
+div.code-toolbar > .toolbar {
+  position: absolute;
+  z-index: 10;
+  top: .3em;
+  right: .2em;
+  transition: opacity 0.3s ease-in-out;
+  opacity: 0;
+}
+
+div.code-toolbar:hover > .toolbar {
+  opacity: 1;
+}
+
+/* Separate line b/c rules are thrown out if selector is invalid.
+   IE11 and old Edge versions don't support :focus-within. */
+div.code-toolbar:focus-within > .toolbar {
+  opacity: 1;
+}
+
+div.code-toolbar > .toolbar > .toolbar-item {
+  display: inline-block;
+}
+
+div.code-toolbar > .toolbar > .toolbar-item > a {
+  cursor: pointer;
+}
+
+div.code-toolbar > .toolbar > .toolbar-item > button {
+  background: none;
+  border: 0;
+  color: inherit;
+  font: inherit;
+  line-height: normal;
+  overflow: visible;
+  padding: 0;
+  -webkit-user-select: none; /* for button */
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+div.code-toolbar > .toolbar > .toolbar-item > a,
+div.code-toolbar > .toolbar > .toolbar-item > button,
+div.code-toolbar > .toolbar > .toolbar-item > span {
+  color: inherit;
+  font-size: .8em;
+  padding: 4px .5em;
+  background: #f5f2f0;
+  background: rgba(224, 224, 224, 0.4);
+  box-shadow: 0 2px 0 0 rgba(0,0,0,0.2);
+  border-radius: .5em;
+}
+
+div.code-toolbar > .toolbar > .toolbar-item > a:hover,
+div.code-toolbar > .toolbar > .toolbar-item > a:focus,
+div.code-toolbar > .toolbar > .toolbar-item > button:hover,
+div.code-toolbar > .toolbar > .toolbar-item > button:focus,
+div.code-toolbar > .toolbar > .toolbar-item > span:hover,
+div.code-toolbar > .toolbar > .toolbar-item > span:focus {
+  color: inherit;
+  text-decoration: none;
+}
+</style><script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script><script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/plugins/line-numbers/prism-line-numbers.min.js"></script><script>!function(){if("undefined"!=typeof Prism&&"undefined"!=typeof document){var e=[],t={},n=function(){};Prism.plugins.toolbar={};var a=Prism.plugins.toolbar.registerButton=function(n,a){var r;r="function"==typeof a?a:function(e){var t;return"function"==typeof a.onClick?((t=document.createElement("button")).type="button",t.addEventListener("click",(function(){a.onClick.call(this,e)}))):"string"==typeof a.url?(t=document.createElement("a")).href=a.url:t=document.createElement("span"),a.className&&t.classList.add(a.className),t.textContent=a.text,t},n in t?console.warn('There is a button with the key "'+n+'" registered already.'):e.push(t[n]=r)},r=Prism.plugins.toolbar.hook=function(a){var r=a.element.parentNode;var l=a.element.classList;if(l.contains('language-mermaid') || l.contains('language-echarts') || l.contains('language-plantuml')){return;} if(r&&/pre/i.test(r.nodeName)&&!r.parentNode.classList.contains("code-toolbar")){var o=document.createElement("div");o.classList.add("code-toolbar"),r.parentNode.insertBefore(o,r),o.appendChild(r);var i=document.createElement("div");i.classList.add("toolbar");var l=e,d=function(e){for(;e;){var t=e.getAttribute("data-toolbar-order");if(null!=t)return(t=t.trim()).length?t.split(/\s*,\s*/g):[];e=e.parentElement}}(a.element);d&&(l=d.map((function(e){return t[e]||n}))),l.forEach((function(e){var t=e(a);if(t){var n=document.createElement("div");n.classList.add("toolbar-item"),n.appendChild(t),i.appendChild(n)}})),o.appendChild(i)}};a("label",(function(e){var t=e.element.parentNode;if(t&&/pre/i.test(t.nodeName)&&t.hasAttribute("data-label")){var n,a,r=t.getAttribute("data-label");try{a=document.querySelector("template#"+r)}catch(e){}return a?n=a.content:(t.hasAttribute("data-url")?(n=document.createElement("a")).href=t.getAttribute("data-url"):n=document.createElement("span"),n.textContent=r),n}})),Prism.hooks.add("complete",r)}}();</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/plugins/toolbar/prism-toolbar.min.css"><script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js"></script><script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/plugins/autoloader/prism-autoloader.min.js"></script><style>div.code-toolbar > .toolbar > .toolbar-item > a, div.code-toolbar > .toolbar > .toolbar-item > button, div.code-toolbar > .toolbar > .toolbar-item > span {padding: 4px .5em; background: #f5f2f0; background: rgba(224, 224, 224, 0.4);}</style>
+
+<style type="text/css">
+figure{margin: 0;padding: 0;}
+figcaption{text-align:center;}
+
+/* PrismJS 1.14.0
+ http://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javascript */
+/**
+ * prism.js default theme for JavaScript, CSS and HTML
+ * Based on dabblet (http://dabblet.com)
+ * @author Lea Verou
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+    color: black;
+    background: none;
+    text-shadow: 0 1px white;
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1.5;
+    
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+    
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+}
+
+pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
+code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection {
+    text-shadow: none;
+    background:#b3d4fc;
+}
+
+pre[class*="language-"]::selection, pre[class*="language-"] ::selection,
+code[class*="language-"]::selection, code[class*="language-"] ::selection {
+    text-shadow: none;
+    background: #b3d4fc;
+}
+
+@media print {
+    code[class*="language-"],
+    pre[class*="language-"] {
+        text-shadow: none;
+    }
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+    padding: 1em;
+    margin: .5em 0;
+    overflow: auto;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+    background: #F7F7F7;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+    padding: .1em;
+    border-radius: .3em;
+    white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+    color: slategray;
+}
+
+.token.punctuation {
+    color: #999;
+}
+
+.namespace {
+    opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+    color: #905;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+    color: #690;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+    color: #9a6e3a;
+    background: hsla(0, 0%, 100%, .5);
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+    color: #07a;
+}
+
+.token.function,
+.token.class-name {
+    color: #DD4A68;
+}
+
+.token.regex,
+.token.important,
+.token.variable {
+    color: #e90;
+}
+
+.token.important,
+.token.bold {
+    font-weight: bold;
+}
+.token.italic {
+    font-style: italic;
+}
+
+.token.entity {
+    cursor: help;
+}
+
+
+pre[class*="language-"].line-numbers {
+    position: relative;
+    padding-left: 3.8em;
+    counter-reset: linenumber;
+}
+
+pre[class*="language-"].line-numbers > code {
+    position: relative;
+    white-space: inherit;
+}
+
+.line-numbers .line-numbers-rows {
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    font-size: 100%;
+    left: -3.8em;
+    width: 3em; /* works for line-numbers below 1000 lines */
+    letter-spacing: -1px;
+    border-right: 1px solid #999;
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+}
+
+    .line-numbers-rows > span {
+        pointer-events: none;
+        display: block;
+        counter-increment: linenumber;
+    }
+
+        .line-numbers-rows > span:before {
+            content: counter(linenumber);
+            color: #999;
+            display: block;
+            padding-right: 0.8em;
+            text-align: right;
+        }
+
+</style>
+
+  
+    
+
+    <script src="asset/js/foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+      function fixSidebarHeight(){
+        var w1 = $('.markdown-body').height();
+          var w2 = $('#sidebar').height();
+          if (w1 > w2) { $('#sidebar').height(w1); };
+      }
+      $(function(){
+        fixSidebarHeight();
+      })
+      $(window).load(function(){
+          fixSidebarHeight();
+      });
+     
+    </script>
+
+
+
+  </body>
+</html>
