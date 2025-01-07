@@ -1,113 +1,24 @@
-<!doctype html>
-<html class="no-js" lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[YICR 的客厅]]></title>
+  <link href="https://yicaoren.github.io/atom.xml" rel="self"/>
+  <link href="https://yicaoren.github.io/"/>
+  <updated>2025-01-07T21:46:15+08:00</updated>
+  <id>https://yicaoren.github.io/</id>
+  <author>
+    <name><![CDATA[]]></name>
     
-  YICR 的客厅
+  </author>
+  <generator uri="http://www.mweb.im/">MWeb</generator>
   
-  </title>
-  
-  
-  <link href="atom.xml" rel="alternate" title="YICR 的客厅" type="application/atom+xml">
-    <link rel="stylesheet" href="asset/css/foundation.min.css" />
-    <link rel="stylesheet" href="asset/css/docs.css" />
-    <script src="asset/js/vendor/modernizr.js"></script>
-    <script src="asset/js/vendor/jquery.js"></script>
- 
-<script type="text/javascript">
-  function before_search(){
-    var searchVal = 'site:yicaoren.github.io ' + document.getElementById('search_input').value;
-    document.getElementById('search_q').value = searchVal;
-    return true;
-  }
-</script>
-  </head>
-  <body class="antialiased hide-extras">
-    
-    <div class="marketing off-canvas-wrap" data-offcanvas>
-      <div class="inner-wrap">
-
-
-<nav class="top-bar docs-bar hide-for-small" data-topbar>
-
-
-  <section class="top-bar-section">
-  <div class="row">
-      <div style="position: relative;width:100%;"><div style="position: absolute; width:100%;">
-        <ul id="main-menu" class="left">
-        
-        <li id=""><a target="_self" href="index.html">Home</a></li>
-        
-        <li id=""><a target="_self" href="archives.html">Archives</a></li>
-        
-        </ul>
-
-        <ul class="right" id="search-wrap">
-          <li>
-<form target="_blank" onsubmit="return before_search();" action="https://google.com/search" method="get">
-    <input type="hidden" id="search_q" name="q" value="" />
-    <input tabindex="1" type="search" id="search_input"  placeholder="Search"/>
-</form>
-</li>
-          </ul>
-      </div></div>
-  </div>
-  </section>
-
-</nav>
-
-        <nav class="tab-bar show-for-small">
-  <a href="javascript:void(0)" class="left-off-canvas-toggle menu-icon">
-    <span> &nbsp; YICR 的客厅</span>
-  </a>
-</nav>
-
-<aside class="left-off-canvas-menu">
-      <ul class="off-canvas-list">
-        
-        <li><a target="_self" href="index.html">Home</a></li>
-        
-        <li><a target="_self" href="archives.html">Archives</a></li>
-        
-
-    <li><label>Categories</label></li>
-
-         
-
-      </ul>
-    </aside>
-
-<a class="exit-off-canvas" href="#"></a>
-
-
-        <section id="main-content" role="main" class="scroll-container">
-        
-       
-
- <script type="text/javascript">
-	$(function(){
-		$('#menu_item_index').addClass('is_active');
-	});
-</script>
-<div class="row">
-	<div class="large-8 medium-8 columns">
-		<div class="markdown-body home-categories">
-		
-			<div class="article">
-                <a class="clearlink" href="17361354064867.html">
-                
-                  <h1>GoodTask 简明使用</h1>
-                  <div class="a-content">
-                      
-		                  <div class="a-content-img">
-                      		<img src="https://res.craft.do/user/full/c3901a94-da04-74b2-10bd-153da26e9212/doc/ABF0ED47-0DC1-4485-855F-F7ECF813D75F/3AD3F5EC-8889-43C8-922B-CA4311A1F0AF_2/BYkptER6xtEyiV3W7d236152fZesNU3xQomLFSbUiJEz/IMG_1695.jpeg" />
-                      	  </div>
-		              
-                      <div class="a-content-text">
-                        
-                        	<h3><a id="%E5%89%8D%E8%A8%80%E5%94%A0%E5%8F%A8" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>前言唠叨</h3>
+  <entry>
+    <title type="html"><![CDATA[GoodTask 简明使用]]></title>
+    <link href="https://yicaoren.github.io/17361354064867.html"/>
+    <updated>2025-01-06T11:50:06+08:00</updated>
+    <id>https://yicaoren.github.io/17361354064867.html</id>
+    <content type="html"><![CDATA[
+<h3><a id="%E5%89%8D%E8%A8%80%E5%94%A0%E5%8F%A8" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>前言唠叨</h3>
 <p>2023-2-19</p>
 <p>再次对各位道歉，刚开年太忙了，一搞又快过去一个月，终于在这个周末才把剩下的一点内容写完，虽然都是一些比较基础的操作，希望还是可以帮到大家。初版先发出来，内容应该有很多瑕疵，大家见谅一下。</p>
 <p>2023-1-25</p>
@@ -228,38 +139,16 @@
 <p>最后的最后，再次感谢@夏本尼为 GoodTask 创作的很多非常漂亮的主题，也是激起好多朋友入手的关键因素，以下链接收录了大部分@夏本尼的主题作品，以及一些官方论坛的作品。</p>
 <p><a href="https://www.craft.do/s/KhvCYJIHBqUyMx">皮肤主题分享</a></p>
 
-                        
-                      </div>
-                  </div>
-                </a>
-                <div class="read-more clearfix">
-                  <div class="more-left left">
-                  
-                    <span class="date">2025/01/06</span>
-                    
-          				   
-                    
-
-                  </div>
-                  <div class="more-right right">
-                  <span class="comments">
-                      
-
-                       
-                  </span>
-                  </div>
-                </div>
-              </div><!-- article -->
-        
-			<div class="article">
-                <a class="clearlink" href="17361459484940.html">
-                
-                  <h1>德龙ECAM22.110.SB调试</h1>
-                  <div class="a-content">
-                      
-                      <div class="a-content-text">
-                        
-                        	<p><a href="https://www.bilibili.com/video/BV1rh411S7yr?spm_id_from=333.337.search-card.all.click">【咖啡】德龙全自动咖啡机22.110SB（日常咖啡制作）_哔哩哔哩_bilibili</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[德龙ECAM22.110.SB调试]]></title>
+    <link href="https://yicaoren.github.io/17361459484940.html"/>
+    <updated>2025-01-06T14:45:48+08:00</updated>
+    <id>https://yicaoren.github.io/17361459484940.html</id>
+    <content type="html"><![CDATA[
+<p><a href="https://www.bilibili.com/video/BV1rh411S7yr?spm_id_from=333.337.search-card.all.click">【咖啡】德龙全自动咖啡机22.110SB（日常咖啡制作）_哔哩哔哩_bilibili</a></p>
 <ul>
 <li>产品设置相关</li>
 </ul>
@@ -284,75 +173,31 @@
 </li>
 </ul>
 
-                        
-                      </div>
-                  </div>
-                </a>
-                <div class="read-more clearfix">
-                  <div class="more-left left">
-                  
-                    <span class="date">2022/04/24</span>
-                    
-          				   
-                    
-
-                  </div>
-                  <div class="more-right right">
-                  <span class="comments">
-                      
-
-                       
-                  </span>
-                  </div>
-                </div>
-              </div><!-- article -->
-        
-			<div class="article">
-                <a class="clearlink" href="17361459485548.html">
-                
-                  <h1>wf-1000xm4 的 EQ 方案推荐</h1>
-                  <div class="a-content">
-                      
-                      <div class="a-content-text">
-                        
-                        	<h2><a id="eq%EF%BC%9A" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>EQ：</h2>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[wf-1000xm4 的 EQ 方案推荐]]></title>
+    <link href="https://yicaoren.github.io/17361459485548.html"/>
+    <updated>2025-01-06T14:45:48+08:00</updated>
+    <id>https://yicaoren.github.io/17361459485548.html</id>
+    <content type="html"><![CDATA[
+<h2><a id="eq%EF%BC%9A" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>EQ：</h2>
 <p>其中最重要的是大幅增加2.5k频段，整体减少低频量，其余都是小修小补。</p>
 <p><img src="https://res.craft.do/user/full/79bdfb64-76b9-0ab6-53c3-db527b75495e/doc/3770E250-502C-476A-A817-08F71F8E847B/5983E291-2071-4117-B176-8DCC27FA9A95_2/r5yoX6GLWSNdxyXv2duBJ6u2Sys9cGstqTdKGJkmaysz/Image.tiff" alt="Image.tiff" /></p>
 <p>下图方案保留了一些索尼自己的调音风格，但仍然大幅度改善听感，如果你想不激进，可以按上图这样做。</p>
 <p><img src="https://res.craft.do/user/full/79bdfb64-76b9-0ab6-53c3-db527b75495e/doc/3770E250-502C-476A-A817-08F71F8E847B/564C0A96-266F-48FA-AE32-BC0A307F5D1E_2/y6bQBQGgjXzuyuzjOgMjyWblPF4T58rM88bs00G9iq0z/Image.tiff" alt="Image.tiff" /></p>
 
-                        
-                      </div>
-                  </div>
-                </a>
-                <div class="read-more clearfix">
-                  <div class="more-left left">
-                  
-                    <span class="date">2021/10/28</span>
-                    
-          				   
-                    
-
-                  </div>
-                  <div class="more-right right">
-                  <span class="comments">
-                      
-
-                       
-                  </span>
-                  </div>
-                </div>
-              </div><!-- article -->
-        
-			<div class="article">
-                <a class="clearlink" href="17361458461430.html">
-                
-                  <h1>家庭影院搭建</h1>
-                  <div class="a-content">
-                      
-                      <div class="a-content-text">
-                        
-                        	<p><strong>硬件</strong></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[家庭影院搭建]]></title>
+    <link href="https://yicaoren.github.io/17361458461430.html"/>
+    <updated>2025-01-06T14:44:06+08:00</updated>
+    <id>https://yicaoren.github.io/17361458461430.html</id>
+    <content type="html"><![CDATA[
+<p><strong>硬件</strong></p>
 <p>电视盒子：Apple TV 4K</p>
 <p>电视机：Sony 65X9000F</p>
 <p>NAS：群晖 DS918+</p>
@@ -404,38 +249,16 @@
 <h3><a id="%E5%9B%BD%E5%86%85%E8%A7%86%E9%A2%91%E7%BD%91%E7%AB%99" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>国内视频网站</h3>
 <p>目前是直接在电视上安装相应的应用来观看，也在考虑通过 AirPlay 隔空播放，毕竟 TV 版会员价格贵。</p>
 
-                        
-                      </div>
-                  </div>
-                </a>
-                <div class="read-more clearfix">
-                  <div class="more-left left">
-                  
-                    <span class="date">2021/03/13</span>
-                    
-          				   
-                    
-
-                  </div>
-                  <div class="more-right right">
-                  <span class="comments">
-                      
-
-                       
-                  </span>
-                  </div>
-                </div>
-              </div><!-- article -->
-        
-			<div class="article">
-                <a class="clearlink" href="17361462245319.html">
-                
-                  <h1>个人知识管理系统1.0</h1>
-                  <div class="a-content">
-                      
-                      <div class="a-content-text">
-                        
-                        	<h2><a id="para%E4%BD%93%E7%B3%BB" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>PARA体系</h2>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[个人知识管理系统1.0]]></title>
+    <link href="https://yicaoren.github.io/17361462245319.html"/>
+    <updated>2025-01-06T14:50:24+08:00</updated>
+    <id>https://yicaoren.github.io/17361462245319.html</id>
+    <content type="html"><![CDATA[
+<h2><a id="para%E4%BD%93%E7%B3%BB" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>PARA体系</h2>
 <p><strong>Project</strong>：&quot;与目标关联的一系列任务，每个任务都有明确的完成期限&quot;。</p>
 <p>例如：完成一个app的设计原型;一个项目开发计划;执行业务开发活动;写博客文章;最终确定产品规格;参加会议</p>
 <p><strong>Area of responsibility</strong>：&quot;一个需要持续一段时间的任务领域&quot;。</p>
@@ -476,440 +299,7 @@
 <li>处理P的过程中需要输入输出的内容交由Drafts来处理，处理完之后存入DEVONthink</li>
 </ol>
 
-                        
-                      </div>
-                  </div>
-                </a>
-                <div class="read-more clearfix">
-                  <div class="more-left left">
-                  
-                    <span class="date">2019/01/06</span>
-                    
-          				   
-                    
-
-                  </div>
-                  <div class="more-right right">
-                  <span class="comments">
-                      
-
-                       
-                  </span>
-                  </div>
-                </div>
-              </div><!-- article -->
-        
-              
-
-
-			<div class="row">
-			  <div class="large-6 columns">
-			  <p class="text-left" style="padding-top:25px;">
-			   
-			  </p>
-			  </div>
-			  <div class="large-6 columns">
-			<p class="text-right" style="padding-top:25px;">
-			
-			</p>
-			  </div>
-			</div>
-		</div>
-	</div><!-- large 8 -->
-
- <div class="large-4 medium-4 columns">
-  <div class="hide-for-small">
-    <div id="sidebar" class="sidebar">
-          <div id="site-info" class="site-info">
-            
-                <h1>YICR 的客厅</h1>
-                <div class="site-des">我自己的一些产品使用体验</div>
-                <div class="social">
-
-
-
-
-
-
-
-
-
-
-
-  <a target="_blank" class="rss" href="atom.xml" title="RSS">RSS</a>
-                
-              	 </div>
-          	</div>
-
-             
-
-              <div id="site-categories" class="side-item ">
-                <div class="side-header">
-                  <h2>Categories</h2>
-                </div>
-                <div class="side-content">
-
-      	<p class="cat-list">
-         
-        </p>
-
-
-                </div>
-              </div>
-
-              <div id="site-categories" class="side-item">
-                <div class="side-header">
-                  <h2>Recent Posts</h2>
-                </div>
-                <div class="side-content">
-                <ul class="posts-list">
-	      
-		      
-			      <li class="post">
-			        <a href="17361354064867.html">GoodTask 简明使用</a>
-			      </li>
-		     
-		  
-		      
-			      <li class="post">
-			        <a href="17361459484940.html">德龙ECAM22.110.SB调试</a>
-			      </li>
-		     
-		  
-		      
-			      <li class="post">
-			        <a href="17361459485548.html">wf-1000xm4 的 EQ 方案推荐</a>
-			      </li>
-		     
-		  
-		      
-			      <li class="post">
-			        <a href="17361458461430.html">家庭影院搭建</a>
-			      </li>
-		     
-		  
-		      
-			      <li class="post">
-			        <a href="17361462245319.html">个人知识管理系统1.0</a>
-			      </li>
-		     
-		   
-		  		</ul>
-                </div>
-              </div>
-        </div><!-- sidebar -->
-      </div><!-- hide for small -->
-</div><!-- large 4 -->
-
-</div><!-- row -->
-
- <div class="page-bottom clearfix">
-  <div class="row">
-   <p class="copyright">Copyright &copy; 2015
-Powered by <a target="_blank" href="http://www.mweb.im">MWeb</a>,&nbsp; 
-Theme used <a target="_blank" href="http://github.com">GitHub CSS</a>.</p>
-  </div>
-</div>
-
-        </section>
-      </div>
-    </div>
-
-<style>.mweb-charts{background:#fff;}
-body{ box-sizing: border-box;
-    margin: 0 auto;}
-@media print{
-    pre, code, pre code {
-     overflow: visible !important;
-     white-space: pre-wrap !important;       /* css-3 */
-     white-space: -moz-pre-wrap !important;  /* Mozilla, since 1999 */
-     white-space: -pre-wrap !important;      /* Opera 4-6 */
-     white-space: -o-pre-wrap !important;    /* Opera 7 */
-     word-wrap: break-word !important;       /* Internet Explorer 5.5+ */
-    }
-    html,body{margin:0;padding:4px;}
-}
-
-
-
-div.code-toolbar {
-  position: relative;
-}
-
-div.code-toolbar > .toolbar {
-  position: absolute;
-  z-index: 10;
-  top: .3em;
-  right: .2em;
-  transition: opacity 0.3s ease-in-out;
-  opacity: 0;
-}
-
-div.code-toolbar:hover > .toolbar {
-  opacity: 1;
-}
-
-/* Separate line b/c rules are thrown out if selector is invalid.
-   IE11 and old Edge versions don't support :focus-within. */
-div.code-toolbar:focus-within > .toolbar {
-  opacity: 1;
-}
-
-div.code-toolbar > .toolbar > .toolbar-item {
-  display: inline-block;
-}
-
-div.code-toolbar > .toolbar > .toolbar-item > a {
-  cursor: pointer;
-}
-
-div.code-toolbar > .toolbar > .toolbar-item > button {
-  background: none;
-  border: 0;
-  color: inherit;
-  font: inherit;
-  line-height: normal;
-  overflow: visible;
-  padding: 0;
-  -webkit-user-select: none; /* for button */
-  -moz-user-select: none;
-  -ms-user-select: none;
-}
-
-div.code-toolbar > .toolbar > .toolbar-item > a,
-div.code-toolbar > .toolbar > .toolbar-item > button,
-div.code-toolbar > .toolbar > .toolbar-item > span {
-  color: inherit;
-  font-size: .8em;
-  padding: 4px .5em;
-  background: #f5f2f0;
-  background: rgba(224, 224, 224, 0.4);
-  box-shadow: 0 2px 0 0 rgba(0,0,0,0.2);
-  border-radius: .5em;
-}
-
-div.code-toolbar > .toolbar > .toolbar-item > a:hover,
-div.code-toolbar > .toolbar > .toolbar-item > a:focus,
-div.code-toolbar > .toolbar > .toolbar-item > button:hover,
-div.code-toolbar > .toolbar > .toolbar-item > button:focus,
-div.code-toolbar > .toolbar > .toolbar-item > span:hover,
-div.code-toolbar > .toolbar > .toolbar-item > span:focus {
-  color: inherit;
-  text-decoration: none;
-}
-</style>
-
-<style type="text/css">
-figure{margin: 0;padding: 0;}
-figcaption{text-align:center;}
-
-/* PrismJS 1.14.0
- http://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javascript */
-/**
- * prism.js default theme for JavaScript, CSS and HTML
- * Based on dabblet (http://dabblet.com)
- * @author Lea Verou
- */
-
-code[class*="language-"],
-pre[class*="language-"] {
-    color: black;
-    background: none;
-    text-shadow: 0 1px white;
-    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
-    text-align: left;
-    white-space: pre;
-    word-spacing: normal;
-    word-break: normal;
-    word-wrap: normal;
-    line-height: 1.5;
-    
-    -moz-tab-size: 4;
-    -o-tab-size: 4;
-    tab-size: 4;
-    
-    -webkit-hyphens: none;
-    -moz-hyphens: none;
-    -ms-hyphens: none;
-    hyphens: none;
-}
-
-pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
-code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection {
-    text-shadow: none;
-    background:#b3d4fc;
-}
-
-pre[class*="language-"]::selection, pre[class*="language-"] ::selection,
-code[class*="language-"]::selection, code[class*="language-"] ::selection {
-    text-shadow: none;
-    background: #b3d4fc;
-}
-
-@media print {
-    code[class*="language-"],
-    pre[class*="language-"] {
-        text-shadow: none;
-    }
-}
-
-/* Code blocks */
-pre[class*="language-"] {
-    padding: 1em;
-    margin: .5em 0;
-    overflow: auto;
-}
-
-:not(pre) > code[class*="language-"],
-pre[class*="language-"] {
-    background: #F7F7F7;
-}
-
-/* Inline code */
-:not(pre) > code[class*="language-"] {
-    padding: .1em;
-    border-radius: .3em;
-    white-space: normal;
-}
-
-.token.comment,
-.token.prolog,
-.token.doctype,
-.token.cdata {
-    color: slategray;
-}
-
-.token.punctuation {
-    color: #999;
-}
-
-.namespace {
-    opacity: .7;
-}
-
-.token.property,
-.token.tag,
-.token.boolean,
-.token.number,
-.token.constant,
-.token.symbol,
-.token.deleted {
-    color: #905;
-}
-
-.token.selector,
-.token.attr-name,
-.token.string,
-.token.char,
-.token.builtin,
-.token.inserted {
-    color: #690;
-}
-
-.token.operator,
-.token.entity,
-.token.url,
-.language-css .token.string,
-.style .token.string {
-    color: #9a6e3a;
-    background: hsla(0, 0%, 100%, .5);
-}
-
-.token.atrule,
-.token.attr-value,
-.token.keyword {
-    color: #07a;
-}
-
-.token.function,
-.token.class-name {
-    color: #DD4A68;
-}
-
-.token.regex,
-.token.important,
-.token.variable {
-    color: #e90;
-}
-
-.token.important,
-.token.bold {
-    font-weight: bold;
-}
-.token.italic {
-    font-style: italic;
-}
-
-.token.entity {
-    cursor: help;
-}
-
-
-pre[class*="language-"].line-numbers {
-    position: relative;
-    padding-left: 3.8em;
-    counter-reset: linenumber;
-}
-
-pre[class*="language-"].line-numbers > code {
-    position: relative;
-    white-space: inherit;
-}
-
-.line-numbers .line-numbers-rows {
-    position: absolute;
-    pointer-events: none;
-    top: 0;
-    font-size: 100%;
-    left: -3.8em;
-    width: 3em; /* works for line-numbers below 1000 lines */
-    letter-spacing: -1px;
-    border-right: 1px solid #999;
-
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-
-}
-
-    .line-numbers-rows > span {
-        pointer-events: none;
-        display: block;
-        counter-increment: linenumber;
-    }
-
-        .line-numbers-rows > span:before {
-            content: counter(linenumber);
-            color: #999;
-            display: block;
-            padding-right: 0.8em;
-            text-align: right;
-        }
-
-</style>
-
+]]></content>
+  </entry>
   
-    
-
-    <script src="asset/js/foundation.min.js"></script>
-    <script>
-      $(document).foundation();
-      function fixSidebarHeight(){
-        var w1 = $('.markdown-body').height();
-          var w2 = $('#sidebar').height();
-          if (w1 > w2) { $('#sidebar').height(w1); };
-      }
-      $(function(){
-        fixSidebarHeight();
-      })
-      $(window).load(function(){
-          fixSidebarHeight();
-      });
-     
-    </script>
-
-
-
-  </body>
-</html>
+</feed>
